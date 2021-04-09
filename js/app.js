@@ -54,16 +54,16 @@ openMenu.addEventListener("click", ()=>{
 
 
    
-   window.addEventListener("scroll", ()=>{
+//    window.addEventListener("scroll", ()=>{
 
-     if(window.scrollY<10){
-        mainMenu.style.top="13%";
-     }
+//      if(window.scrollY<10){
+//         mainMenu.style.top="13%";
+//      }
 
-     else{
-         mainMenu.style.top="9%"
-     }
+//      else{
+//          mainMenu.style.top="9%"
+//      }
 
    
-   })
+//    })
 

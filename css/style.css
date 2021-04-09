@@ -196,6 +196,136 @@ body {
   }
 }
 
+@keyframes flip {
+  0% {
+    -webkit-transform: rotate(-1deg) translateY(0);
+            transform: rotate(-1deg) translateY(0);
+  }
+  100% {
+    -webkit-transform: rotate(5deg) translateY(5px);
+            transform: rotate(5deg) translateY(5px);
+  }
+}
+
+@media (max-width: 767px) {
+  @-webkit-keyframes flip {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @keyframes flip {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @-webkit-keyframes flipleft {
+    0% {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+    50% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @keyframes flipleft {
+    0% {
+      -webkit-transform: translateY(0) rotate(0);
+              transform: translateY(0) rotate(0);
+    }
+    50% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @-webkit-keyframes up {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @keyframes up {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @-webkit-keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(1deg);
+              transform: rotate(1deg);
+    }
+  }
+  @keyframes rotate {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(1deg);
+              transform: rotate(1deg);
+    }
+  }
+  @-webkit-keyframes scale {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+  @keyframes scale {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    50% {
+      -webkit-transform: translateY(5px);
+              transform: translateY(5px);
+    }
+    100% {
+      -webkit-transform: translateY(10px);
+              transform: translateY(10px);
+    }
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
@@ -455,13 +585,13 @@ body {
   }
   .header .nav-list {
     padding-bottom: 1rem;
+    top: -100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
     visibility: hidden;
-    opacity: 0;
     position: fixed;
     width: 100%;
     background: white;
@@ -477,7 +607,7 @@ body {
   }
   .header .nav-list.active {
     visibility: visible;
-    opacity: 1;
+    top: 10%;
   }
   .header .nav-list li {
     margin-left: 0;
@@ -503,6 +633,9 @@ body {
   .background .flex-container .flex-left {
     width: 100%;
   }
+  .background .flex-container .flex-left .content-bottom {
+    padding: 0 1rem;
+  }
   .background .flex-container .flex-left .content-bottom h3 {
     font-size: 3rem;
   }
@@ -513,6 +646,7 @@ body {
   }
   .background .flex-container .flex-left .content {
     margin: auto;
+    width: 90%;
     margin-top: 10px;
   }
   .background .flex-container .flex-left .content-bottom h3 {

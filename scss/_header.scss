@@ -256,11 +256,11 @@
 
             &-list {
                 padding-bottom: 1rem;
-                
+                top: -100%;
                 flex-direction: column;
                 width: 100%;
                 visibility: hidden;
-                opacity: 0;
+            
                
                 position: fixed;
                 width: 100%;
@@ -274,7 +274,8 @@
 
                 &.active {
                     visibility: visible;
-                    opacity: 1;
+                    
+                    top: 10%;
                     
                 }
 
@@ -311,8 +312,10 @@
                 width: 100%;
 
                 .content-bottom {
+                    padding: 0 1rem;
                     h3 {
                         font-size: 3rem;
+                        
                     }
 
 
@@ -326,7 +329,7 @@
 
                 .content {
                     margin: auto;
-
+                    width: 90%;
                     margin-top: 10px;
 
                     &-bottom {
