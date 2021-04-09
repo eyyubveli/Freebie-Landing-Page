@@ -1,0 +1,349 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    transition: all .5s;
+    margin-top: 10rem;
+
+    .logo {
+
+        a {
+            display: inline-block;
+
+
+            h5 {
+
+                font-weight: 700;
+                color: $icon;
+                font-size: 3rem;
+            }
+
+            span {
+                color: $logo-color-1;
+            }
+        }
+
+
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+
+
+    .nav {
+        display: flex;
+
+        .openMenu,
+        .closeMenu {
+            display: none;
+        }
+
+        &-list {
+            display: flex;
+            align-items: center;
+            transition: all .5s;
+
+            li {
+
+                margin-left: 3.5rem;
+
+                a {
+                    display: inline-block;
+                    color: $logo-color-1;
+                    text-align: center;
+                    position: relative;
+
+                    &::before {
+
+                        transition: all .5s;
+                        position: absolute;
+                        content: '';
+                        width: 0;
+                        top: 110%;
+                        height: 2px;
+                        background: $try-color;
+                        display: block;
+
+                    }
+
+                    &:hover:not(.last)::before {
+                        width: 100%
+                    }
+
+                }
+
+                .last {
+
+                    @include tryButton;
+
+
+                }
+            }
+
+
+
+            & li:first-child {
+                margin-left: 0;
+            }
+
+        }
+
+        .openMenu {
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
+
+    &.sticky {
+        background: $white;
+        box-shadow: 5px 2px 5px rgba(0, 0, 0, .2);
+        margin-top: 0;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+    }
+
+    // @include mq("mobile"){
+    //     background: red;
+    // }
+
+
+
+}
+.background {
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-top: 15rem;
+
+    .flex-container {
+        padding-left: 3rem;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+
+        .flex-left {
+            width: 50%;
+
+            .content {
+                max-width: 360px;
+                width: 100%;
+                border-radius: 17.5px;
+                display: flex;
+                background: $editor;
+                align-items: center;
+
+                &-star {
+                    background: $icon;
+                    border-radius: 17.5px;
+                    padding: 10px;
+                    color: $white;
+                    margin-right: 1rem;
+                }
+
+                &-text {
+                    color: $logo-color-1;
+                    font-size: 1.8rem;
+                }
+
+                &-bottom {
+                    margin-top: 3rem;
+
+                    h3 {
+                        font-size: 6rem;
+                        font-weight: 900;
+                        color: $logo-color-1;
+                    }
+
+                    p {
+                        color: $gray;
+                        font-size: 1.8rem;
+                        margin-top: 4rem;
+                        margin-bottom: 4rem;
+                    }
+
+                    .try {
+                        @include tryButton;
+                        transition: all .3s;
+
+                        &:hover {
+                            background: transparent;
+                            color: $try-color;
+                        }
+
+                    }
+
+
+                    .watch {
+                        color: $try-color;
+                        margin-left: 2.5rem;
+                        transition: all .3s;
+
+                        // &:hover{
+                        //     @include tryButton;
+                        // }
+
+                    }
+                }
+
+
+            }
+
+
+        }
+
+        .flex-right {
+            width: 50%;
+            margin-top: 1rem;
+            animation: flip 3s infinite alternate;
+            padding-left: 10rem;
+            transition: all .3s;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                transition: all .3s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+
+@include mq("desktop") {
+    html {
+        font-size: 8px;
+    }
+
+
+
+    .header {
+        margin-top: 5rem;
+        
+        .logo{
+            padding: 10px;
+        }
+
+        .flex {
+            flex-direction: column;
+            align-items: stretch;
+
+        }
+
+        .nav {
+            width: 100%;
+            position: relative;
+
+            .openMenu {
+                position: absolute;
+                right: 0;
+                bottom: 1px;
+                display: block;
+                z-index: 100000;
+                padding: 10px;
+            }
+
+            &-list {
+                padding-bottom: 1rem;
+                
+                flex-direction: column;
+                width: 100%;
+                visibility: hidden;
+                opacity: 0;
+               
+                position: fixed;
+                width: 100%;
+                background: white;
+                box-shadow: 3px 3px 4px rgba(0, 0, 0, .1);
+
+                justify-content: flex-start;
+                transition: all .5s;
+                overflow: hidden;
+                z-index: 111;
+
+                &.active {
+                    visibility: visible;
+                    opacity: 1;
+                    
+                }
+
+                li {
+                    margin-left: 0;
+                    margin-top: 2rem;
+                    text-align: left;
+
+                    a {
+                        color: black;
+                    }
+                }
+
+
+            }
+        }
+    }
+
+
+}
+
+@include mq {
+    .background {
+        background-size: contain;
+        margin-top: 15rem;
+
+        .flex-container {
+            padding-left: 1rem;
+            flex-wrap: wrap;
+            text-align: center;
+
+            .flex-left {
+
+                width: 100%;
+
+                .content-bottom {
+                    h3 {
+                        font-size: 3rem;
+                    }
+
+
+
+                    .watch {
+                        display: inline-block;
+                        margin-top: 2rem;
+                        margin-left: 1rem;
+                    }
+                }
+
+                .content {
+                    margin: auto;
+
+                    margin-top: 10px;
+
+                    &-bottom {
+                        h3 {
+                            font-size: 2.5rem;
+                        }
+                    }
+                }
+
+
+            }
+
+            .flex-right {
+                margin-top: 2rem;
+                width: 100%;
+                padding-left: 2rem;
+            }
+        }
+    }
+}

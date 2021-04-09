@@ -1,0 +1,193 @@
+.testmonials {
+    padding-top: 26rem;
+
+    .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-left {
+            width: 50%;
+        }
+
+        &-right {
+            width: 50%;
+            position: relative;
+
+            .text {
+                max-width: 550px;
+                position: relative;
+
+                h4 {
+                    font-size: 4rem;
+                    color: $logo-color-1;
+                    margin-bottom: 2.4rem;
+                }
+
+                p {
+                    color: $gray;
+                }
+            }
+            .content {
+                max-width: 550px;
+                text-align: left;
+
+
+
+                .slide {
+                    position: relative;
+
+                    .list {
+                        display: flex;
+                        margin-top: 4rem;
+                        margin-bottom: 2.5rem;
+
+                        li {
+                            margin-left: 1rem;
+                        }
+                    }
+
+                    &-text {
+                        h5 {
+                            font-size: 2rem;
+                            color: $logo-color-1;
+                            margin-bottom: 3rem;
+                        }
+
+                        p {
+                            line-height: 26px;
+                            color: $gray;
+                            margin-bottom: 8rem;
+                        }
+                    }
+
+                    .image-content {
+                        display: flex;
+                        align-items: center;
+
+                        .slide-img {
+                            margin-right: 3rem;
+                        }
+
+                        .slide-profile-info {
+                            font-size: 1.8rem;
+
+                            p {
+                                color: $logo-color-1;
+                            }
+
+                            span {
+                                color: $gray;
+                                margin-top: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .swiper-container {
+                position: relative;
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    position: absolute;
+                    top: 90%;
+                    right: 100px !important;
+                    width: 50px;
+                    height: 50px;
+                    color: $try-color;
+
+                }
+
+                .swiper-button-prev {
+
+                    // color: #e6e8ec;
+
+                    right: 160px !important;
+                    left: auto !important;
+
+                    border: 1px solid #f3f6fa;
+                    border-radius: 50%;
+
+                    &::after {
+                        display: block;
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f30a";
+                        font-weight: 900;
+                        font-size: 1.8rem;
+                    }
+                }
+
+                .swiper-button-next {
+                    transform: rotate(180deg);
+                    background: #eff3f8;
+                    border-radius: 50%;
+                    margin-left: 5px;
+
+                    &::after {
+                        display: block;
+                        font-family: 'Font Awesome 5 Free';
+                        content: "\f30a";
+                        font-weight: 900;
+
+                        font-size: 1.8rem;
+                    }
+                }
+
+                
+
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .list{
+            li i{
+                color: #ffcc00;
+            }
+        }
+    }
+
+    @include mq{
+        .wrap{
+            padding-right: 10px;
+            padding-left: 10px;
+            flex-wrap: wrap;
+            flex-direction: column;
+            &-left,&-right{
+                width: 100%;
+            }
+
+            &-right{
+                margin-top: 2rem;
+
+                .swiper-container{
+                    .swiper-button-next{
+                        right: 0 !important;
+                        top: 85%;
+                    }
+
+                    .swiper-button-prev{
+                        right: 70px !important;
+                        top: 85%;
+                    }
+                }
+
+                .text{
+                    max-width: 100%;
+                    margin-top: 3rem;
+                    h4{
+                        font-size: 3rem;
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    
+}

@@ -1,0 +1,90 @@
+.download{
+    margin-top: 20rem;
+    padding-left: 10rem;
+    &-wrap{
+        display:flex;
+        align-items: center;
+    }
+
+    &-right{
+        width: 50%;
+        background: url(../img/download-img.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 430px;
+    }
+
+    &-left{
+       width: 50%;
+    }
+
+    &-title{
+        font-size: 4.8rem;
+        color: $logo-color-1;
+    }
+
+    &-subtitle{
+        color: $gray;
+        margin-top: 3.6rem;
+    }
+
+    &-img{
+        margin-top: 5rem;
+        display: flex;
+      
+        .play-store{
+            margin-right: 3rem;
+        }
+        a{
+            display: inline-block;
+        }
+
+        img{
+            display: block;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover{
+                transform: translateY(-5px);
+            }
+        }
+    }
+    
+    @include mq{
+
+
+        padding-left: 0;
+        &-wrap{
+            flex-wrap: wrap;
+        }
+
+        &-left,&-right{
+            width: 100%;
+        }
+
+        &-left{
+            padding-left: 1rem;
+            padding-right: 1rem;
+           
+            .download-img{
+                justify-content: center;
+                
+            }
+        }
+
+        &-text{
+            text-align: center;
+            padding: 0 15px;
+        }
+
+        &-title{
+            font-size: 3.8rem;
+        }
+
+        img{
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+}

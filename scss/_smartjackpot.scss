@@ -1,0 +1,212 @@
+.smartjackpot {
+    margin-top: 20rem;
+
+    .text-content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .text-left {
+            width: 50%;
+            border-right: 1px solid rgba(97, 99, 104, 39%);
+
+            h3 {
+                font-size: 4rem;
+                font-weight: 800;
+                color: $logo-color-1;
+
+              
+                  
+            }
+        }
+
+        .text-right {
+            width: 50%;
+            margin-left: 5rem;
+            color: $gray;
+        }
+    }
+
+    .icon-content {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10rem;
+      
+        &-1 {
+            margin-left: 0 !important;
+
+            .icon-img-1 {
+                background: $app-devo;
+                border-radius: 50%;
+                text-align: center;
+                width: 90px;
+                height: 87px;
+                position: relative;
+
+            }
+
+            .text {
+                margin-top: 3rem;
+
+                p {
+                    margin-top: 2rem;
+                }
+
+                h5 {
+                    font-size: 2rem;
+                    color: $performance;
+                }
+            }
+        }
+
+        .icon-align {
+            border-radius: 50%;
+            text-align: center;
+            width: 90px;
+            height: 87px;
+            position: relative;
+        }
+
+        &-1,
+        &-2,
+        &-3 {
+            width: 33.333%;
+            margin-left: 12rem;
+
+            img {
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+        }
+
+        &-2 {
+            .icon-img-2 {
+                background: $planning;
+            }
+
+            .text {
+                margin-top: 3rem;
+
+
+                p {
+                    margin-top: 2rem;
+                }
+
+                h5 {
+                    font-size: 2rem;
+                    color: $prototyping;
+                }
+            }
+        }
+
+        &-3 {
+            .icon-img-3 {
+                background: $custom;
+            }
+
+            .text {
+                margin-top: 3rem;
+
+
+                p {
+                    margin-top: 2rem;
+                }
+
+                h5 {
+                    font-size: 2rem;
+                    color: $vector;
+                }
+            }
+
+
+        }
+
+    }
+
+    @include mq {
+        .text-content {
+            flex-direction: column;
+            padding: 0 10px;
+
+            .text-left {
+                h3 {
+                    font-size: 2.8rem;
+                }
+
+                border-right: 0;
+                border-bottom: 1px solid #616369;
+                padding-bottom: 1rem;
+            }
+
+            .text-left,
+            .text-right {
+                width: 100%;
+            }
+
+            .text-right {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+
+        .icon-content{
+            flex-wrap: wrap;
+            .icon-content-1,.icon-content-2,.icon-content-3{
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 2rem;
+                text-align: center;
+                .icon-align{
+                    margin: auto;
+                }
+
+                .text{
+                    padding: 0 20px;
+                }
+            }
+        }
+    }
+
+    @include mq("tablet"){
+        .icon-content{
+            flex-wrap: wrap;
+        }
+
+        .icon-content-1,.icon-content-2,.icon-content-3{
+            width: 50%;
+            margin-left: 0;
+            text-align: center;
+            padding-left: 1rem;
+        }
+
+        .icon-content-3{
+            margin-top: 2rem;
+        }
+
+        .icon-align{
+            margin: auto;
+        }
+    }
+
+    @include mq("desktop2"){
+        .icon-content{
+            flex-wrap: nowrap;
+
+            &-1,&-2,&-3{
+                width: 33.333%;
+                margin-left: 12rem;
+                text-align: left;
+            }
+
+            .icon-align{
+                margin: 0;
+            }
+        }
+    }
+}

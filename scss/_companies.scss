@@ -1,0 +1,59 @@
+.companies{
+    margin-top: 10rem;
+
+    .title{
+        text-align: center;
+        color: $logo-color-1;
+        font-weight: 500
+    }
+
+    &-flex{
+        @include flex-container;
+        align-items: center;
+        margin-top: 6rem;
+
+        &-box{
+            margin-right: 7rem;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include mq{
+        &-flex{
+            text-align: center;
+          
+
+            &-box{
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 3rem;
+
+                
+            }
+        }
+    }
+
+    @include mq("tablet"){
+
+        &-flex{
+            text-align: center;
+            &-box{
+                width: 50%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    @include mq("lgdesktop"){
+        &-flex{
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+
+
+

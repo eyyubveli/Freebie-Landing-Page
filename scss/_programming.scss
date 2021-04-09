@@ -1,0 +1,118 @@
+.programming{
+    margin-top: 10rem;
+    position: relative;
+    margin-bottom: 20rem;
+    
+    &::before{
+        content: '';
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        height: 3px;
+        background: $planning;
+    }
+
+    .wrap{
+       @include flex-container;
+        align-items: center;
+        &-left{
+            width: 50%;
+            animation: up 2s alternate infinite;
+
+        }
+
+        &-right{
+            width: 50%;
+
+            .content{
+                margin-left: 11rem;
+
+                h3{
+                    font-size: 3.6rem;
+                    color: $logo-color-1;
+                    font-weight: 900;
+                    margin-bottom: 2.5rem;
+                }
+
+                p{
+                    color: $gray;
+                    margin-bottom: 4rem;
+                }
+
+                a{
+                    @include tryButton;
+                    transition: all .5s;
+                    
+                    &:hover{
+                        background: transparent;
+                        color: $logo-color-1;
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include mq{
+        .wrap{
+            flex-direction: column;
+
+            &-left,&-right{
+                width: 100%;
+            }
+
+            &-right{
+                margin-top: 5rem;
+
+
+                .content{
+                    margin-left: 2rem;
+
+                    h3{
+                        font-size: 2.8rem;
+                    }
+                }
+            }
+
+            &-left{
+                img{
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    
+    
+    @include mq("tablet"){
+        .wrap{
+            flex-direction: column;
+
+            &-left,&-right{
+                width: 100%;
+            }
+
+            &-right{
+                .content{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    
+    @include mq("desktop2"){
+        .wrap{
+            flex-direction: row;
+
+            &-left,&-right{
+                width: 50%;
+            }
+
+            &-right{
+                .content{
+                    margin-left: 11rem;
+                }
+            }
+        }
+    }
+}

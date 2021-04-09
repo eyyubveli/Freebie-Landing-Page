@@ -1,0 +1,141 @@
+.app {
+    margin-top: 18rem;
+
+    &-content {
+
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        &-left {
+            width: 50%;
+            background-image: url(../img/ellipsis-back.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            transition: cubic-bezier(.6,-0.28,.74,.05) 0.3s;
+            &:hover{
+                transform: scale(.9);
+            }
+
+            img {
+                display: block;
+                max-width: 100%;
+                height: auto;
+                cursor: pointer;
+                animation: flipleft 3s infinite alternate;
+
+               
+            }
+        }
+
+        &-right {
+            width: 50%;
+
+            margin-left: 4rem;
+
+            .text {
+                h4 {
+                    font-size: 3.6rem;
+                    color: $logo-color-1;
+                }
+
+                p {
+                    color: $gray;
+                    margin-top: 3rem;
+                    margin-bottom: 8rem;
+                }
+            }
+
+            .content-bottom {
+
+                &-box {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 7rem;
+
+                    .box-img {
+                        border-radius: 50%;
+                        padding: 17px;
+                        margin-right: 3rem;
+                    }
+
+
+
+                    .box-img-1 {
+                        background: $app-devo;
+                        margin-top: 0;
+                    }
+
+                    .box-img-2 {
+                        background: $planning;
+                        ;
+                    }
+
+                    .box-img-3 {
+                        background: $custom;
+
+                    }
+
+                    .box-text {
+                        h5 {
+                            font-size: 2rem;
+                            margin-bottom: 2rem;
+                        }
+
+                        p {
+                            caret-color: $gray;
+                        }
+
+                        .performance {
+                            color: $performance;
+                        }
+
+                        .proto {
+                            color: $prototyping;
+                        }
+
+                        .vector {
+                            color: $vector;
+                        }
+
+                    }
+
+
+
+
+
+                }
+            }
+
+        }
+
+    }
+
+    @include mq{
+        &-content{
+           flex-direction: column;
+
+           &-left,&-right{
+               width: 100%;
+           }
+
+           &-right{
+               margin-left: 0;
+
+               .text{
+                   text-align: center;
+
+                   h4{
+                       font-size: 2.8rem;
+                   }
+               }
+               .box-img{
+                   margin-right: 1rem !important;
+               }
+           }
+        }
+    }
+
+   
+}

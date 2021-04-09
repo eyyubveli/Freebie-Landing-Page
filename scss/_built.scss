@@ -1,0 +1,250 @@
+.built {
+    margin-top: 19rem;
+    padding-left: 10rem;
+    width: 100%;
+
+    .top {
+        h3 {
+            font-size: 3.6rem;
+            color: $logo-color-1;
+            font-weight: 800;
+        }
+
+        p {
+            color: $gray;
+        }
+    }
+
+    &-wrap {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .built-left {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+
+            .built-box {
+                width: 50%;
+                padding: 3rem;
+
+                .icon-img {
+                    @include icon-align;
+                    margin: 0px;
+
+                    img {
+                        @include img-align;
+                    }
+                }
+
+                .text {
+                    h5 {
+                        font-size: 2rem;
+                        color: $logo-color-1;
+                        font-weight: 800;
+                        margin-top: 3.5rem;
+                        margin-bottom: 1.5rem;
+                    }
+
+                    p {
+                        color: $gray;
+                    }
+                }
+            }
+
+            .built-box:nth-child(1) {
+                padding-left: 0;
+
+                .icon-img {
+                    background: $app-devo;
+                }
+            }
+
+            .built-box:nth-child(2) {
+                .icon-img {
+                    background: $custom;
+                }
+            }
+
+            .built-box:nth-child(3) {
+                padding-left: 0;
+
+                .icon-img {
+                    background: $cloud;
+                }
+            }
+
+            .built-box:nth-child(4) {
+
+                .icon-img {
+                    background: $planning;
+                }
+            }
+
+            .see {
+                margin-top: 5.4rem;
+                @include tryButton;
+                transition: all .5s;
+
+                &:hover{
+                    color: $logo-color-1;
+                    background-color: transparent;
+                }
+               
+            }
+        }
+
+        .built-right {
+            width: 50%;
+            background-image: url(../img/phone-back.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+
+            .bottom-img {
+                width: 25%;
+
+                img {
+                    animation: rotate 3.5s infinite alternate;
+                    cursor: pointer;
+                    transition: all .3s;
+
+                    &:hover {
+                        transform: rotate(10deg);
+                    }
+                }
+
+            }
+
+            .top-img {
+                width: 25%;
+
+                img {
+                    animation: scale 3.5s infinite alternate;
+                    transition: all .3s;
+                    position: relative;
+                    z-index: 1;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: translateY(30px);
+                    }
+                }
+
+            }
+        }
+    }
+
+    @include mq {
+        padding-left: 2rem;
+
+        .top {
+            width: 100%;
+            text-align: center;
+            h3{
+                font-size: 2.8rem;
+            }
+            p {
+                margin-top: 1rem;
+            }
+        }
+
+        &-wrap {
+            flex-direction: column;
+
+            .built-left {
+                width: 100%;
+
+                .built-box {
+                    width: 100%;
+                    text-align: center;
+
+                    .icon-img {
+                        margin: auto;
+                    }
+
+
+                }
+
+                .see {
+                    margin: 5.4rem auto;
+                }
+            }
+
+            .built-right {
+                background-size: contain;
+                width: 100%;
+                justify-content: center;
+                margin-top: 2rem;
+
+                .bottom-img {
+                    width: 50%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+
+                .top-img {
+                    width: 50%;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+
+
+
+    }
+
+    @include mq("tablet") {
+        &-wrap {
+            flex-direction: column;
+
+            .built-left,.built-right {
+                width: 100%;
+            }
+
+            
+        }
+
+        &-right{
+            margin-top: 2rem;
+            background-size: contain !important;
+            .top-img,.bottom-img{
+                width: 100%;
+            }
+        }
+
+        .top{
+            text-align: center;
+            h3{
+                margin-bottom: 1rem;
+            }
+        }
+
+    }
+
+    @include mq("lgdesktop"){
+        &-wrap{
+            flex-direction: row;
+
+            .built-left,.built-right{
+                width: 50%;
+            }
+            
+        }
+
+        &-right{
+            background-size: cover;
+        }
+    }
+
+
+
+}

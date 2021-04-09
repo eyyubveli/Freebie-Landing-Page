@@ -1,0 +1,89 @@
+@mixin tryButton {
+    padding: 2rem 4rem;
+    background-color: $try-color;
+    border-radius: 28.5px;
+    color: $white;
+    font-weight: 700;
+    display: inline-block;
+}
+
+@mixin flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+@mixin icon-align {
+    border-radius: 50%;
+    text-align: center;
+    width: 90px;
+    height: 87px;
+    position: relative;
+    margin: auto;
+}
+
+
+@mixin img-align {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin mq ($width: "mobile") {
+    @if($width=="mobile"){
+        @media (max-width: 767px) {
+            @content;
+         }
+    }
+    
+
+    @else if($width=="mobile2"){
+        @media (min-width:576px){
+            @content;
+        }
+    }
+
+
+    @else if($width=="tablet"){
+        @media (min-width: 768px) { 
+            @content;
+         }
+    }
+
+
+    @else  if($width=="desktop"){
+        @media (max-width: 992px) {  
+            @content;
+        }
+    }
+
+    @else if($width=="desktop2"){
+        @media (min-width:992px){
+            @content;
+        }
+    }
+
+    @else if($width=="lgdesktop"){
+        @media (min-width: 1200px) { 
+            @content;
+         }
+    }
+}
+
+
+
+
+
+
+// Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {  }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {  }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }

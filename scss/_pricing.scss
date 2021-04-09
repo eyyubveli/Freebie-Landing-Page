@@ -1,0 +1,208 @@
+.pricing {
+    margin-top: 17rem;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 110%;
+        width: 100%;
+        height: 3px;
+        background: #f4f4ff;
+    }
+
+    &-text {
+        text-align: center;
+        max-width: 640px;
+        margin: auto;
+
+        h3 {
+            font-size: 3.6rem;
+            color: $logo-color-1;
+        }
+
+        p {
+            color: $gray;
+            margin-top: 4rem;
+        }
+    }
+
+    .switch {
+        text-align: center;
+        margin-top: 8rem;
+
+        .wrap {
+
+            display: inline-block;
+            position: relative;
+            border-radius: 28.5px;
+            border: 1px solid #ebebeb;
+            padding: 5px;
+
+            label {
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+
+                span {
+                    width: 136px;
+                    height: 48px;
+                    display: inline-block;
+                    line-height: 48px;
+                    color: #616368;
+                }
+            }
+
+
+            input {
+                display: none;
+            }
+
+
+            input#annually:checked~.coverback {
+                left: 50%;
+
+            }
+
+
+            #monthly:checked~label span.month {
+                color: white;
+            }
+
+            #annually:checked~label span.annu {
+                color: white;
+            }
+
+
+            .coverback {
+                position: absolute;
+                width: 136px;
+                height: 48px;
+                background: #2500f9;
+                left: 7px;
+                top: 5px;
+                border-radius: 28.5px;
+                z-index: -1;
+                transition: all .6s;
+            }
+        }
+    }
+
+    .card-wrap {
+        gap: 4rem;
+        margin-top: 3.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .card-left {
+            box-shadow: 3.837px 54.866px 62px 0px rgba(144, 163, 177, 0.18);
+        }
+
+        .card {
+            border-radius: 9px;
+            background-color: rgb(255, 255, 255);
+
+            width: 50%;
+
+            &-top {
+                margin-top: 7rem;
+                background: linear-gradient(to bottom, #fefeff, #f4f7f9);
+
+
+                .top {
+                    text-align: center;
+
+                    h5 {
+                        font-size: 6rem;
+                        color: $logo-color-1;
+
+                        span {
+                            font-size: 1.8rem;
+                            color: #999ca5;
+                        }
+                    }
+
+                }
+
+                .bottom {
+                    text-align: center;
+                    margin-top: 3rem;
+                    padding-bottom: 3.7rem;
+
+                    h5 {
+                        font-size: 2rem;
+                        color: $logo-color-1;
+                        margin-bottom: 1rem;
+                    }
+
+                    small {
+                        color: $gray;
+                    }
+                }
+            }
+
+            &-bottom {
+                text-align: center;
+                padding-top: 4rem;
+
+                .list {
+                    li {
+                        line-height: 48px;
+                        color: #999ca5;
+                    }
+                }
+
+                .btn {
+                    display: inline-block;
+                    background: $try-color;
+                    padding: 20px 50px;
+                    border-radius: 28px;
+                    color: $white;
+                    margin-top: 4rem;
+                    margin-bottom: 2.5rem;
+                    transition: all .5s;
+
+                    &:hover {
+                        background: transparent;
+                        color: $logo-color-1;
+                    }
+                }
+            }
+        }
+
+        .card-right {
+            border: 2px solid #ebebeb;
+
+            a {
+                display: block;
+                color: $try-color;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+    }
+
+    @include mq{
+        &-text{
+            max-width: 100%;
+            h3{
+                font-size: 2.8rem;
+            }
+        }
+
+        .card-wrap{
+            flex-wrap: wrap;
+            padding-left: 10px;
+            padding-right: 10px;
+            .card-left{
+                width: 100%;
+            }
+            .card-right{
+                width: 100%;
+            }
+        }
+    }
+
+    
+}

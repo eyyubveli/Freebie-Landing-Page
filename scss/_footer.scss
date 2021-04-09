@@ -1,0 +1,59 @@
+.footer{
+    background: $footer;
+    &-content{
+        text-align: center;
+        padding-top: 11.6rem;
+    }
+
+    &-logo{
+        font-size: 3rem;
+        margin-bottom: 5rem;
+        h3{
+            color: $logo-color;
+
+            span{
+                color: $white;
+            }
+        }
+
+       
+    }
+
+    &-nav{
+       
+        margin-bottom: 5rem;
+        a{
+            color: $white;
+            margin-right: 3.7rem;
+            display: inline-block;
+        }
+
+        a:last-child{
+            margin-right: 0;
+        }
+    }
+
+    &-social{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 9rem;
+       
+        a{
+            font-size: 3rem;
+            color: $white;
+            margin-right: 2rem;
+            display: inline-block;
+            transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+            &:hover{
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &-copyright{
+        color: $white;
+        opacity: 21%;
+    }
+
+    
+}
