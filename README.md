@@ -15,3 +15,8 @@ Freebie landing page was created using html / css (scss) and javascript.
         <li>Faq</li>
         <li>Try for free</li>
   </ul>
+
+<h1>Installation </h1>
+
+git clone https://github.com/eyyubveli/Freebie-Landing-Page.git
+cd Freebie-Landing-Page
