@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="663" height="773" viewBox="0 0 663 773">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #edf3fa;
+        fill-rule: evenodd;
+        opacity: 0.64;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect x="-936.828" y="-4726.83" width="1600" height="9499"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-path)">
+    <path class="cls-1" d="M1021.24,4836.49c-80.6-139,319.31-139.68,475.46-37.44,165.22,108.17,149.7,181.49,139.93,488.64-7.45,234.28-472.45,276.57-655.99,117.08C810.181,5256.63,1202.8,5149.61,1021.24,4836.49Z" transform="translate(-936.828 -4726.83)"/>
+  </g>
+</svg>
