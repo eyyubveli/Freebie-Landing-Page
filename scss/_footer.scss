@@ -55,5 +55,10 @@
         opacity: 21%;
     }
 
-    
+    @include mq{
+        &-nav{
+            margin-right: 1.7rem;
+        }
+    }    
 }
+

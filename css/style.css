@@ -196,17 +196,6 @@ body {
   }
 }
 
-@keyframes flip {
-  0% {
-    -webkit-transform: rotate(-1deg) translateY(0);
-            transform: rotate(-1deg) translateY(0);
-  }
-  100% {
-    -webkit-transform: rotate(5deg) translateY(5px);
-            transform: rotate(5deg) translateY(5px);
-  }
-}
-
 @media (max-width: 767px) {
   @-webkit-keyframes flip {
     0% {
@@ -230,30 +219,30 @@ body {
   }
   @-webkit-keyframes flipleft {
     0% {
-      -webkit-transform: translateY(0) rotate(0);
-              transform: translateY(0) rotate(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
     50% {
       -webkit-transform: translateY(5px);
               transform: translateY(5px);
     }
     100% {
-      -webkit-transform: translateY(10px);
-              transform: translateY(10px);
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
     }
   }
   @keyframes flipleft {
     0% {
-      -webkit-transform: translateY(0) rotate(0);
-              transform: translateY(0) rotate(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
     50% {
       -webkit-transform: translateY(5px);
               transform: translateY(5px);
     }
     100% {
-      -webkit-transform: translateY(10px);
-              transform: translateY(10px);
+      -webkit-transform: translateY(15px);
+              transform: translateY(15px);
     }
   }
   @-webkit-keyframes up {
@@ -2035,6 +2024,9 @@ body {
   .faq-top {
     font-size: 3rem;
   }
+  .faq-content {
+    padding-left: .5rem;
+  }
 }
 
 .download {
@@ -2197,5 +2189,11 @@ body {
 .footer-copyright {
   color: #fff;
   opacity: 21%;
+}
+
+@media (max-width: 767px) {
+  .footer-nav {
+    margin-right: 1.7rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
