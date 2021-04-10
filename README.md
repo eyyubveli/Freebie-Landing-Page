@@ -3,7 +3,7 @@ Freebie landing page was created using html / css (scss) and javascript.
 
 ------------------------------------------------------------------------
 
-<h2><a href="https://freebielandingpage.netlify.app/" style="font-size: 30px;">Demo</a> </h2>
+<h2><a href="https://freebielandingpage.netlify.app/" style="font-size: 30px;">Demo</a target="_blank"> </h2>
 
 <h1> Sections </h1>
 
