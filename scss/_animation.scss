@@ -61,15 +61,6 @@
 
 
 
-@keyframes flip{
-    0%{
-        transform: rotate(-1deg) translateY(0);
-    }
-
-    100%{
-        transform: rotate(5deg) translateY(5px);
-    }
-}
 
 
 
@@ -89,7 +80,7 @@
 
     @keyframes flipleft{
         0%{
-            transform: translateY(0) rotate(0);
+            transform: translateY(0) ;
         }
     
         50%{
