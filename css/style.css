@@ -581,6 +581,7 @@ body {
             flex-direction: column;
     width: 100%;
     visibility: hidden;
+    left: 0;
     position: fixed;
     width: 100%;
     background: white;
@@ -921,7 +922,7 @@ body {
   margin-left: 12rem;
 }
 
-.smartjackpot .icon-content-1 img, .smartjackpot .icon-content-2 img, .smartjackpot .icon-content-3 img {
+.smartjackpot .icon-content-1 svg, .smartjackpot .icon-content-2 svg, .smartjackpot .icon-content-3 svg {
   display: block;
   position: absolute;
   top: 50%;
@@ -1016,9 +1017,6 @@ body {
     margin-left: 0;
     text-align: center;
     padding-left: 1rem;
-  }
-  .smartjackpot .icon-content-3 {
-    margin-top: 2rem;
   }
   .smartjackpot .icon-align {
     margin: auto;
@@ -1235,7 +1233,7 @@ body {
   margin: auto;
 }
 
-.why-wrap-box .icon-align img {
+.why-wrap-box .icon-align svg {
   display: block;
   position: absolute;
   top: 50%;
@@ -1335,7 +1333,7 @@ body {
   margin: 0px;
 }
 
-.built-wrap .built-left .built-box .icon-img img {
+.built-wrap .built-left .built-box .icon-img svg {
   display: block;
   position: absolute;
   top: 50%;

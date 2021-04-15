@@ -45,9 +45,9 @@ labelMonth.addEventListener("click", () => {
 
 
 openMenu.addEventListener("click", ()=>{
-    mainMenu.classList.toggle("active");
+   mainMenu.classList.toggle("active");
     
-   
+  ///openMenu.innerHTML="<i class='fab fa-500px'></i>"
     
 
 })
