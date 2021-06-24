@@ -15,4 +15,3 @@ Freebie landing page was created using html / css (scss) and javascript.
         <li>Faq</li>
         <li>Try for free</li>
   </ul>
-
