@@ -53,18 +53,14 @@
             font-size: 4rem;
         }
 
-        &.show~.faq-subtitle {
-            height: auto;
-            padding-top: 4rem;
-            padding-bottom: 7.8rem;
-        }
+       
 
-        &.show{
-          
+        &.active{
+            
             font-weight: 800;
         }
 
-        &.show::before{
+        &.active::before{
             content: "-";
         }
     }
@@ -75,7 +71,15 @@
         transition: all .5s;
         height: 0;
         overflow: hidden;
+
+        &.active{
+            height: auto;
+            padding-top: 4rem;
+            padding-bottom: 7.8rem;
+        }
     }
+
+
 
     @include mq{
         &-title{
@@ -85,7 +89,7 @@
             }
 
             &.show~.faq-subtitle {
-                height: 180px !important;
+                height: 100px !important;
                 padding-top: 4rem;
                 padding-bottom: 7.8rem;
             }

@@ -1993,17 +1993,11 @@ img {
   font-size: 4rem;
 }
 
-.faq-title.show ~ .faq-subtitle {
-  height: auto;
-  padding-top: 4rem;
-  padding-bottom: 7.8rem;
-}
-
-.faq-title.show {
+.faq-title.active {
   font-weight: 800;
 }
 
-.faq-title.show::before {
+.faq-title.active::before {
   content: "-";
 }
 
@@ -2016,13 +2010,19 @@ img {
   overflow: hidden;
 }
 
+.faq-subtitle.active {
+  height: auto;
+  padding-top: 4rem;
+  padding-bottom: 7.8rem;
+}
+
 @media (max-width: 767px) {
   .faq-title::before {
     right: 10px;
     font-size: 3rem;
   }
   .faq-title.show ~ .faq-subtitle {
-    height: 180px !important;
+    height: 100px !important;
     padding-top: 4rem;
     padding-bottom: 7.8rem;
   }

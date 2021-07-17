@@ -1,4 +1,3 @@
-
 const mainCardLeft = document.querySelector(".card-left");
 const labelAnnu = document.getElementById("annually1");
 const labelMonth = document.getElementById("monthly1")
@@ -9,11 +8,14 @@ const cardRight1 = document.querySelector(".card-right").querySelector("span");
 let openMenu = document.querySelector(".openMenu");
 let mainMenu = document.querySelector(".nav-list");
 const html = document.querySelector("html");
-const faq = document.getElementsByClassName("faq-title");
+const faqTitle = document.querySelectorAll(".faq-title");
+const faqSub = document.querySelectorAll(".faq-subtitle");
+
+
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
     header.classList.toggle("sticky", window.scrollY > 10);
-   
+
 
 })
 
@@ -33,27 +35,52 @@ labelMonth.addEventListener("click", () => {
     cardRight.innerHTML = "$99  <span> / month <span>";
 
 })
- 
+
+faqTitle.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
 
 
-    for(let i=0; i<faq.length; i++){
-        faq[i].addEventListener("click", ()=>{
-            faq[i].classList.toggle("show");
+        faqSub.forEach((sub) => {
+
+            if (e.target.nextElementSibling !== sub && sub.classList.contains("active")) {
+                sub.classList.remove("active");
+
+                faqTitle.forEach((btn) => {
+                    btn.classList.remove("active")
+                })
+            }
+
+        })
+
+        const body = btn.nextElementSibling;
+        btn.classList.toggle("active")
+        body.classList.toggle("active");
+    })
+})
+
+
+window.onclick = (e) => {
+    if (!e.target.matches(".faq-title, .faq-subtitle,p")) {
+        faqTitle.forEach((btn) => {
+            btn.classList.remove("active");
+        })
+        faqSub.forEach((sub) => {
+            sub.classList.remove("active")
         })
     }
+}
 
 
+openMenu.addEventListener("click", () => {
+    mainMenu.classList.toggle("active");
 
-openMenu.addEventListener("click", ()=>{
-   mainMenu.classList.toggle("active");
-    
-  ///openMenu.innerHTML="<i class='fab fa-500px'></i>"
-    
+    ///openMenu.innerHTML="<i class='fab fa-500px'></i>"
+
 
 })
 
 
-   
+
 //    window.addEventListener("scroll", ()=>{
 
 //      if(window.scrollY<10){
@@ -64,6 +91,5 @@ openMenu.addEventListener("click", ()=>{
 //          mainMenu.style.top="9%"
 //      }
 
-   
-//    })
 
+//    })
