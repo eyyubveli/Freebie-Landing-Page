@@ -5,11 +5,12 @@ const cardLeft = document.querySelector(".card-left").querySelector("h5");
 const cardRight = document.querySelector(".card-right").querySelector("h5");
 const cardLeft1 = document.querySelector(".card-left").querySelector("span");
 const cardRight1 = document.querySelector(".card-right").querySelector("span");
-let openMenu = document.querySelector(".openMenu");
-let mainMenu = document.querySelector(".nav-list");
+const openMenu = document.querySelector(".openMenu");
+const mainMenu = document.querySelector(".nav-list");
 const html = document.querySelector("html");
 const faqTitle = document.querySelectorAll(".faq-title");
 const faqSub = document.querySelectorAll(".faq-subtitle");
+const links = document.querySelectorAll("ul li a");
 
 
 window.addEventListener("scroll", () => {
@@ -50,11 +51,18 @@ faqTitle.forEach((btn) => {
                 })
             }
 
+
+
+
         })
+
 
         const body = btn.nextElementSibling;
         btn.classList.toggle("active")
         body.classList.toggle("active");
+
+
+
     })
 })
 
@@ -79,17 +87,21 @@ openMenu.addEventListener("click", () => {
 
 })
 
+openMenu.addEventListener('click', () => {
 
 
-//    window.addEventListener("scroll", ()=>{
+    if (window.scrollY === 0) {
+        mainMenu.style.marginTop = '50px'
+    }
 
-//      if(window.scrollY<10){
-//         mainMenu.style.top="13%";
-//      }
+    window.addEventListener('scroll', () => {
 
-//      else{
-//          mainMenu.style.top="9%"
-//      }
+        if (window.scrollY === 0) {
+            mainMenu.style.marginTop = '50px'
+        } else {
+            mainMenu.style.marginTop = '0px'
+        }
 
+    })
 
-//    })
+})

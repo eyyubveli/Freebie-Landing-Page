@@ -73,6 +73,8 @@
 
                     }
 
+                    
+
                     &:hover:not(.last)::before {
                         width: 100%
                     }
@@ -116,9 +118,11 @@
 
 
 }
+
 .background {
-    background-image: url(../img/bg.svg);
+    background-image: url(../img/bg.png);
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center center;
     margin-top: 15rem;
 
@@ -230,8 +234,8 @@
 
     .header {
         margin-top: 5rem;
-        
-        .logo{
+
+        .logo {
             padding: 10px;
         }
 
@@ -273,10 +277,12 @@
 
                 &.active {
                     visibility: visible;
-                    
-                    top: 10%;
-                    
+
+                    top: 9%;
+
                 }
+
+               
 
                 li {
                     margin-left: 0;
@@ -285,7 +291,11 @@
 
                     a {
                         color: black;
+
+
                     }
+
+
                 }
 
 
@@ -312,9 +322,10 @@
 
                 .content-bottom {
                     padding: 0 1rem;
+
                     h3 {
                         font-size: 3rem;
-                        
+
                     }
 
 

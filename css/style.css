@@ -436,8 +436,9 @@ img {
 }
 
 .background {
-  background-image: url(../img/bg.svg);
+  background-image: url(../img/bg.png);
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center center;
   margin-top: 15rem;
 }
@@ -604,7 +605,7 @@ img {
   }
   .header .nav-list.active {
     visibility: visible;
-    top: 10%;
+    top: 9%;
   }
   .header .nav-list li {
     margin-left: 0;
