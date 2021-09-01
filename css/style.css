@@ -400,7 +400,7 @@ img {
   width: 0;
   top: 110%;
   height: 2px;
-  background: #2500f9;
+  background-color: #2500f9;
   display: block;
 }
 
@@ -1890,6 +1890,10 @@ img {
   content: "\f30a";
   font-weight: 900;
   font-size: 1.8rem;
+}
+
+.testmonials .wrap .swiper-overflow {
+  overflow-x: hidden;
 }
 
 .testmonials .wrap img {

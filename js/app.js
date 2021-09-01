@@ -12,7 +12,6 @@ const faqTitle = document.querySelectorAll(".faq-title");
 const faqSub = document.querySelectorAll(".faq-subtitle");
 const links = document.querySelectorAll("ul li a");
 
-
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
     header.classList.toggle("sticky", window.scrollY > 10);
@@ -105,3 +104,5 @@ openMenu.addEventListener('click', () => {
     })
 
 })
+
+

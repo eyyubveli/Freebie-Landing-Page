@@ -41,13 +41,6 @@
     }
     
 
-    @else if($width=="mobile2"){
-        @media (min-width:576px){
-            @content;
-        }
-    }
-
-
     @else if($width=="tablet"){
         @media (min-width: 768px) { 
             @content;

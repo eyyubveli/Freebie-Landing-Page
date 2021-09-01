@@ -88,7 +88,7 @@
 
             .swiper-container {
                 position: relative;
-                overflow-x: hidden;
+              
 
                 .swiper-button-prev,
                 .swiper-button-next {
@@ -141,6 +141,10 @@
             }
         }
 
+        .swiper-overflow{
+            overflow-x: hidden;
+        }
+
         img {
             max-width: 100%;
             height: auto;
@@ -153,7 +157,7 @@
         }
     }
 
-    
+
 
     @include mq {
         .wrap {
